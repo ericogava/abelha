@@ -1,7 +1,7 @@
 const tela = document.getElementById("myCanvas")
 const telaJogo = tela.getContext("2d")
 
-let bg = new obj(0,0,500,750,"img/bg.png")
+let bg = new BG(0, 0, 500, 750, "img/bg.png")
 let abelha = new Abelha(200, 500, 100, 100, "img/bee1.png")
 let aranha = new Aranha(100, 100, 100, 100, "img/spider1.png")
 
@@ -30,6 +30,7 @@ function draw(){
 }
 
 function update(){
+    bg.mover()
     abelha.mover()
     aranha.mover()
 }

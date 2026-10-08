@@ -13,7 +13,10 @@ class obj{
         telaJogo.drawImage(imagem, this.posx, this.posy,this.largura,this.altura)
         
     }
-}class Abelha extends obj{
+
+}
+
+class Abelha extends obj{
     dir = 0
     mover(){
         this.posx += this.dir
@@ -26,6 +29,15 @@ class Aranha extends obj{
         if(this.posy > 750){
             this.posy = -100
             this.posx = Math.random() *  (500-this.largura)
+        }
+    }
+}
+
+class BG extends obj(){
+    mover(){
+    this.posy += 3
+        if(this.posy > 750){
+        this.posy = 0
         }
     }
 }
